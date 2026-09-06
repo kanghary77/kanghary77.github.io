@@ -6,8 +6,8 @@
     
     <!-- META TAG SEO & DESKRIPSI WEBSITE -->
     <title>kanghary77 - Kandank Online & Layanan Digital</title>
-    <meta name="description" content="Website resmi kanghary77. Temukan berbagai aplikasi, layanan, dan produk digital terbaik di Kandank Online. Pesan cepat via WhatsApp.">
-    <meta name="keywords" content="kanghary77, kandank online, toko online, portofolio, layanan digital, bisnis">
+    <meta name="description" content="Website resmi kanghary77. Temukan berbagai aplikasi, absen online, dan layanan digital terbaik di Kandank Online.">
+    <meta name="keywords" content="kanghary77, kandank online, absen online, pythonanywhere, toko online, portofolio">
     <meta name="author" content="kanghary77">
 
     <style>
@@ -17,7 +17,7 @@
             margin: 0;
             padding: 0;
             color: #333;
-            scroll-behavior: smooth; /* Membuat animasi gulir halus saat menu diklik */
+            scroll-behavior: smooth;
         }
         /* Header Atas */
         header {
@@ -149,6 +149,23 @@
             font-weight: bold;
             margin-bottom: 15px;
         }
+        
+        /* Tombol Umum & Eksternal Link */
+        .btn-action {
+            display: inline-block;
+            background-color: #0366d6;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: background-color 0.2s;
+        }
+        .btn-action:hover {
+            background-color: #024ea4;
+        }
+
         .btn-wa {
             display: inline-block;
             background-color: #25d366;
@@ -194,7 +211,7 @@
         <p class="tagline">Selamat Datang di Website & Aplikasi Portofolio Saya</p>
     </header>
 
-    <!-- Bar Navigasi Menu & Search (Aktif Mengarahkan ke Bagian Menu) -->
+    <!-- Bar Navigasi Menu & Search -->
     <div class="navbar">
         <div class="menu-links">
             <a href="#beranda" class="nav-btn">BERANDA</a>
@@ -215,13 +232,26 @@
         <!-- MENU 1: BERANDA -->
         <div class="section-block">
             <h2 class="section-title">🏠 Selamat Datang di Kandank Online</h2>
-            <p style="text-align: center; color: #555; font-size: 1.1em;">Pusat penyediaan aplikasi, layanan digital, dan peluang bisnis terpercaya. Silakan pilih menu di atas untuk melihat detail penawaran kami.</p>
+            <p style="text-align: center; color: #555; font-size: 1.1em;">Pusat aplikasi web mandiri, layanan digital, dan sistem absensi online terpadu.</p>
         </div>
 
-        <!-- MENU 2: APLIKASI -->
+        <!-- MENU 2: APLIKASI (Termasuk Sub-Menu Absen Online) -->
         <div id="aplikasi" class="section-block">
-            <h2 class="section-title">📱 Aplikasi Pilihan</h2>
+            <h2 class="section-title">📱 Aplikasi & Sistem Online</h2>
             <div class="product-grid">
+                
+                <!-- Sub-Menu / Kartu Absen Online (Terhubung ke PythonAnywhere) -->
+                <div class="product-card">
+                    <div class="product-img">📋</div>
+                    <div class="product-info">
+                        <div class="product-name">Absen Online</div>
+                        <div class="product-price" style="color: #28a745; font-size: 0.95em;">Sistem Aktif</div>
+                        <p style="font-size: 0.85em; color: #666; margin-bottom: 15px;">Aplikasi absensi berbasis web mandiri.</p>
+                        <a href="https://kanghary77.pythonanywhere.com/" target="_blank" class="btn-action">Buka Absen Online</a>
+                    </div>
+                </div>
+
+                <!-- Aplikasi Pendukung Lainnya -->
                 <div class="product-card">
                     <div class="product-img">📊</div>
                     <div class="product-info">
@@ -230,14 +260,7 @@
                         <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20membeli%20Aplikasi%20Web%20Kasir" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img">📑</div>
-                    <div class="product-info">
-                        <div class="product-name">Aplikasi Undangan Digital</div>
-                        <div class="product-price">Rp 50.000</div>
-                        <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20membeli%20Aplikasi%20Undangan%20Digital" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
-                    </div>
-                </div>
+
             </div>
         </div>
 
@@ -275,9 +298,9 @@
         <div id="kontak" class="section-block">
             <h2 class="section-title">📞 Hubungi Kami</h2>
             <div class="contact-box">
-                <p>Punya pertanyaan atau ingin berkonsultasi seputar produk dan layanan kami? Hubungi langsung melalui WhatsApp di bawah ini:</p>
+                <p>Punya pertanyaan seputar aplikasi atau layanan kami? Hubungi langsung melalui WhatsApp:</p>
                 <br>
-                <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20kanghary77,%20saya%20ingin%20bertanya%20mengenai%20website%20Anda" target="_blank" class="btn-wa" style="padding: 12px 25px; font-size: 1.1em;">Chat WhatsApp Sekarang</a>
+                <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20kanghary77,%20saya%20ingin%20bertanya" target="_blank" class="btn-wa" style="padding: 12px 25px; font-size: 1.1em;">Chat WhatsApp Sekarang</a>
             </div>
         </div>
 
