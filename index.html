@@ -7,7 +7,7 @@
     <!-- META TAG SEO & DESKRIPSI WEBSITE -->
     <title>kanghary77 - Kandank Online & Layanan Digital</title>
     <meta name="description" content="Website resmi kanghary77. Temukan berbagai aplikasi, layanan, dan produk digital terbaik di Kandank Online. Pesan cepat via WhatsApp.">
-    <meta name="keywords" content="kanghary77, kandank online, toko online, portofolio, layanan digital">
+    <meta name="keywords" content="kanghary77, kandank online, toko online, portofolio, layanan digital, bisnis">
     <meta name="author" content="kanghary77">
 
     <style>
@@ -17,6 +17,7 @@
             margin: 0;
             padding: 0;
             color: #333;
+            scroll-behavior: smooth; /* Membuat animasi gulir halus saat menu diklik */
         }
         /* Header Atas */
         header {
@@ -47,6 +48,9 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             flex-wrap: wrap;
             gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .menu-links {
             display: flex;
@@ -54,7 +58,7 @@
             flex-wrap: wrap;
         }
         .nav-btn {
-            background-color: #faebd7; /* Warna krem/peach lembut seperti contoh */
+            background-color: #faebd7;
             color: #222;
             padding: 8px 20px;
             border-radius: 6px;
@@ -87,16 +91,23 @@
             color: #333;
         }
 
-        /* Konten Utama / Etalase */
+        /* Konten / Bagian Section */
         .container {
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
+        .section-block {
+            margin-bottom: 60px;
+            padding-top: 20px;
+        }
         .section-title {
             text-align: center;
             margin-bottom: 30px;
             color: #222;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
         }
         .product-grid {
             display: flex;
@@ -153,6 +164,17 @@
             background-color: #1ebe5d;
         }
 
+        /* Kotak Kontak */
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -167,19 +189,19 @@
 <body>
 
     <!-- Header Atas -->
-    <header>
+    <header id="beranda">
         <h1>kanghary77</h1>
         <p class="tagline">Selamat Datang di Website & Aplikasi Portofolio Saya</p>
     </header>
 
-    <!-- Bar Navigasi Menu & Search -->
+    <!-- Bar Navigasi Menu & Search (Aktif Mengarahkan ke Bagian Menu) -->
     <div class="navbar">
         <div class="menu-links">
-            <a href="#" class="nav-btn">BERANDA</a>
-            <a href="#" class="nav-btn">APLIKASI</a>
-            <a href="#" class="nav-btn">LAYANAN</a>
-            <a href="#" class="nav-btn">BISNIS</a>
-            <a href="#" class="nav-btn">KONTAK</a>
+            <a href="#beranda" class="nav-btn">BERANDA</a>
+            <a href="#aplikasi" class="nav-btn">APLIKASI</a>
+            <a href="#layanan" class="nav-btn">LAYANAN</a>
+            <a href="#bisnis" class="nav-btn">BISNIS</a>
+            <a href="#kontak" class="nav-btn">KONTAK</a>
         </div>
         <div class="search-box">
             <span>🔍</span>
@@ -187,33 +209,78 @@
         </div>
     </div>
 
-    <!-- Konten Etalase Produk / Penjualan -->
+    <!-- Konten Utama Website -->
     <div class="container">
-        <h2 class="section-title">📦 Etalase Produk & Layanan</h2>
-        
-        <div class="product-grid">
-            <!-- Produk 1 -->
-            <div class="product-card">
-                <div class="product-img">📱</div>
-                <div class="product-info">
-                    <div class="product-name">Aplikasi / Jasa 1</div>
-                    <div class="product-price">Rp 50.000</div>
-                    <!-- Ganti 628xxxxxxxx dengan nomor WhatsApp Anda -->
-                    <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20dengan%20Aplikasi%201" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
-                </div>
-            </div>
 
-            <!-- Produk 2 -->
-            <div class="product-card">
-                <div class="product-img">⚙️</div>
-                <div class="product-info">
-                    <div class="product-name">Produk Digital 2</div>
-                    <div class="product-price">Rp 100.000</div>
-                    <!-- Ganti 628xxxxxxxx dengan nomor WhatsApp Anda -->
-                    <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20dengan%20Produk%202" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+        <!-- MENU 1: BERANDA -->
+        <div class="section-block">
+            <h2 class="section-title">🏠 Selamat Datang di Kandank Online</h2>
+            <p style="text-align: center; color: #555; font-size: 1.1em;">Pusat penyediaan aplikasi, layanan digital, dan peluang bisnis terpercaya. Silakan pilih menu di atas untuk melihat detail penawaran kami.</p>
+        </div>
+
+        <!-- MENU 2: APLIKASI -->
+        <div id="aplikasi" class="section-block">
+            <h2 class="section-title">📱 Aplikasi Pilihan</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">📊</div>
+                    <div class="product-info">
+                        <div class="product-name">Aplikasi Web Kasir</div>
+                        <div class="product-price">Rp 75.000</div>
+                        <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20membeli%20Aplikasi%20Web%20Kasir" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">📑</div>
+                    <div class="product-info">
+                        <div class="product-name">Aplikasi Undangan Digital</div>
+                        <div class="product-price">Rp 50.000</div>
+                        <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20membeli%20Aplikasi%20Undangan%20Digital" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- MENU 3: LAYANAN -->
+        <div id="layanan" class="section-block">
+            <h2 class="section-title">⚙️ Layanan Kami</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">💻</div>
+                    <div class="product-info">
+                        <div class="product-name">Jasa Pembuatan Web</div>
+                        <div class="product-price">Rp 150.000</div>
+                        <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20dengan%20Jasa%20Pembuatan%20Web" target="_blank" class="btn-wa">Pesan via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU 4: BISNIS -->
+        <div id="bisnis" class="section-block">
+            <h2 class="section-title">💼 Peluang Bisnis</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">🚀</div>
+                    <div class="product-info">
+                        <div class="product-name">Kemitraan Reseller</div>
+                        <div class="product-price">Rp 100.000</div>
+                        <a href="https://wa.me/628xxxxxxxxxx?text=Halo,%20saya%20tertarik%20bergabung%20Kemitraan%20Reseller" target="_blank" class="btn-wa">Gabung via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU 5: KONTAK -->
+        <div id="kontak" class="section-block">
+            <h2 class="section-title">📞 Hubungi Kami</h2>
+            <div class="contact-box">
+                <p>Punya pertanyaan atau ingin berkonsultasi seputar produk dan layanan kami? Hubungi langsung melalui WhatsApp di bawah ini:</p>
+                <br>
+                <a href="https://wa.me/628xxxxxxxxxx?text=Halo%20kanghary77,%20saya%20ingin%20bertanya%20mengenai%20website%20Anda" target="_blank" class="btn-wa" style="padding: 12px 25px; font-size: 1.1em;">Chat WhatsApp Sekarang</a>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
