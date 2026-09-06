@@ -7,7 +7,7 @@
     <!-- META TAG SEO & DESKRIPSI WEBSITE -->
     <title>kanghary77 - Kandank Online & Layanan Digital</title>
     <meta name="description" content="Website resmi kanghary77. Temukan berbagai aplikasi, absen online, dan layanan digital terbaik di Kandank Online.">
-    <meta name="keywords" content="kanghary77, kandank online, absen online, pythonanywhere, toko online, portofolio">
+    <meta name="keywords" content="kanghary77, kandank online, absen online, pythonanywhere, toko online">
     <meta name="author" content="kanghary77">
 
     <style>
@@ -41,38 +41,77 @@
         /* Navigasi Menu Bar */
         .navbar {
             background-color: #ffffff;
-            padding: 12px 40px;
+            padding: 10px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             flex-wrap: wrap;
-            gap: 15px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         .menu-links {
             display: flex;
-            gap: 12px;
+            gap: 8px;
+            align-items: center;
             flex-wrap: wrap;
         }
         .nav-btn {
             background-color: #faebd7;
             color: #222;
-            padding: 8px 20px;
+            padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
             font-size: 0.95em;
-            transition: background-color 0.2s, transform 0.1s;
+            transition: background-color 0.2s;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: none;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
         }
         .nav-btn:hover {
             background-color: #f3d2a4;
-            transform: translateY(-2px);
         }
-        
+
+        /* Gaya untuk Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none; /* Sembunyikan sub-menu secara default */
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+            border-radius: 6px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9em;
+            font-weight: bold;
+            border-bottom: 1px solid #f1f1f5;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f0f2f5;
+            color: #0366d6;
+        }
+        /* Saat kursor diarahkan ke dropdown, sub-menu akan tampil */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* Kotak Pencarian */
         .search-box {
             display: flex;
@@ -149,8 +188,6 @@
             font-weight: bold;
             margin-bottom: 15px;
         }
-        
-        /* Tombol Umum & Eksternal Link */
         .btn-action {
             display: inline-block;
             background-color: #0366d6;
@@ -165,7 +202,6 @@
         .btn-action:hover {
             background-color: #024ea4;
         }
-
         .btn-wa {
             display: inline-block;
             background-color: #25d366;
@@ -211,11 +247,21 @@
         <p class="tagline">Selamat Datang di Website & Aplikasi Portofolio Saya</p>
     </header>
 
-    <!-- Bar Navigasi Menu & Search -->
+    <!-- Bar Navigasi Menu dengan Sub-Menu Dropdown -->
     <div class="navbar">
         <div class="menu-links">
             <a href="#beranda" class="nav-btn">BERANDA</a>
-            <a href="#aplikasi" class="nav-btn">APLIKASI</a>
+            
+            <!-- MENU APLIKASI DENGAN SUB-MENU -->
+            <div class="dropdown">
+                <button class="nav-btn">APLIKASI ▼</button>
+                <div class="dropdown-content">
+                    <a href="https://kanghary77.pythonanywhere.com/" target="_blank">📋 Absen Online</a>
+                    <a href="#aplikasi">📊 Web Kasir</a>
+                    <a href="#aplikasi">📑 Undangan Digital</a>
+                </div>
+            </div>
+
             <a href="#layanan" class="nav-btn">LAYANAN</a>
             <a href="#bisnis" class="nav-btn">BISNIS</a>
             <a href="#kontak" class="nav-btn">KONTAK</a>
@@ -235,12 +281,12 @@
             <p style="text-align: center; color: #555; font-size: 1.1em;">Pusat aplikasi web mandiri, layanan digital, dan sistem absensi online terpadu.</p>
         </div>
 
-        <!-- MENU 2: APLIKASI (Termasuk Sub-Menu Absen Online) -->
+        <!-- MENU 2: APLIKASI -->
         <div id="aplikasi" class="section-block">
             <h2 class="section-title">📱 Aplikasi & Sistem Online</h2>
             <div class="product-grid">
                 
-                <!-- Sub-Menu / Kartu Absen Online (Terhubung ke PythonAnywhere) -->
+                <!-- Kartu Absen Online (Terhubung ke PythonAnywhere) -->
                 <div class="product-card">
                     <div class="product-img">📋</div>
                     <div class="product-info">
@@ -251,7 +297,7 @@
                     </div>
                 </div>
 
-                <!-- Aplikasi Pendukung Lainnya -->
+                <!-- Aplikasi Web Kasir -->
                 <div class="product-card">
                     <div class="product-img">📊</div>
                     <div class="product-info">
