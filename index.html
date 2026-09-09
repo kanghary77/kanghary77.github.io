@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kanghary77 - Beranda</title>
-    <meta name="description" content="Website resmi kanghary77. Pusat aplikasi web mandiri, layanan digital, dan peluang bisnis terpercaya.">
-    <!-- Google Fonts untuk tampilan modern -->
+    <title>kanghary77 - Beranda & Pembelajaran Online</title>
+    <meta name="description" content="Website resmi kanghary77. Pusat pembelajaran online, aplikasi web mandiri, layanan digital, dan peluang bisnis terpercaya.">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,7 +13,6 @@
             --bg-color: #f8fafc;
             --text-color: #1e293b;
             --card-bg: #ffffff;
-            --accent-color: #38bdf8;
         }
 
         body { 
@@ -30,34 +29,32 @@
         header { 
             background: var(--primary-gradient);
             color: white;
-            padding: 25px 40px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            flex-wrap: wrap; 
+            padding: 30px 40px; 
+            text-align: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         h1 { 
-            margin: 0; 
-            font-size: 1.8em; 
+            margin: 0 0 8px 0; 
+            font-size: 2.2em; 
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .tagline { 
-            font-size: 0.95em; 
-            opacity: 0.9;
+            font-size: 1em; 
+            opacity: 0.95;
             margin: 0;
         }
 
+        /* --- MENU NAVIGASI MODERN & RESPONSIF --- */
         .navbar { 
             background-color: #ffffff; 
-            padding: 12px 40px; 
+            padding: 15px 30px; 
             display: flex; 
-            justify-content: flex-start; 
+            justify-content: center; 
             align-items: center; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+            box-shadow: 0 4px 15px -3px rgba(0,0,0,0.05); 
             position: sticky;
             top: 0;
             z-index: 100;
@@ -66,68 +63,187 @@
         .menu-links { 
             display: flex; 
             gap: 12px; 
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .nav-btn { 
             background-color: #f1f5f9; 
             color: #475569; 
-            padding: 8px 18px; 
-            border-radius: 8px; 
+            padding: 10px 20px; 
+            border-radius: 12px; 
             text-decoration: none; 
             font-weight: 600; 
             font-size: 0.9em; 
-            transition: all 0.25s ease; 
+            transition: all 0.3s ease; 
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .nav-btn:hover { 
-            background-color: #e2e8f0; 
-            color: #0f172a;
-            transform: translateY(-1px);
+            background-color: #e0f2fe; 
+            color: #0284c7;
+            border-color: #bae6fd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
         }
 
         .nav-active { 
             background: var(--primary-gradient); 
             color: white; 
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            border-color: transparent;
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
         }
 
         .nav-active:hover {
+            background: var(--primary-gradient);
             color: white;
             opacity: 0.95;
+            transform: translateY(-2px);
         }
+        /* -------------------------------------- */
 
         .container { 
-            max-width: 800px; 
-            margin: 60px auto; 
+            max-width: 1000px; 
+            margin: 40px auto; 
             padding: 0 20px; 
-            text-align: center; 
             flex: 1;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        .welcome-box { 
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card { 
             background: var(--card-bg); 
-            padding: 50px 40px; 
-            border-radius: 16px; 
+            padding: 40px; 
+            border-radius: 20px; 
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); 
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
+            margin-bottom: 20px;
         }
 
-        .welcome-box:hover {
-            transform: translateY(-3px);
-        }
-
-        .welcome-box h2 {
+        .card h2 {
             margin-top: 0;
-            font-size: 1.8em;
+            font-size: 1.6em;
             color: #0f172a;
         }
 
-        .welcome-box p { 
+        .card p, .card li { 
             color: #64748b; 
-            font-size: 1.1em; 
+            font-size: 1.05em; 
             line-height: 1.7; 
-            margin-bottom: 0;
+        }
+
+        .grid-courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .course-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            border-color: #cbd5e1;
+        }
+
+        .course-card h3 {
+            margin-top: 0;
+            color: #0f172a;
+            font-size: 1.2em;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background: #0ea5e9;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-top: 15px;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-action:hover {
+            background: #0284c7;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #334155;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+        }
+
+        .submit-btn {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1em;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
         }
 
         footer { 
@@ -139,12 +255,14 @@
             font-size: 0.9em; 
         }
 
-        /* Responsif untuk layar HP */
+        /* Responsif HP */
         @media (max-width: 600px) {
-            header, .navbar { padding: 15px 20px; }
-            header { flex-direction: column; align-items: flex-start; gap: 8px; }
-            .container { margin: 30px auto; }
-            .welcome-box { padding: 30px 20px; }
+            header { padding: 20px 15px; }
+            .navbar { padding: 12px 15px; }
+            .menu-links { gap: 8px; }
+            .nav-btn { padding: 8px 14px; font-size: 0.85em; border-radius: 10px; }
+            .container { margin: 20px auto; padding: 0 15px; }
+            .card { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -152,27 +270,122 @@
 
     <header>
         <h1>kanghary77</h1>
-        <p class="tagline">Selamat Datang di Website Portofolio Saya</p>
+        <p class="tagline">Pusat Portofolio, Aplikasi, & Pembelajaran Online</p>
     </header>
 
-    <div class="navbar">
+    <!-- Menu Navigasi Modern & Responsif -->
+    <nav class="navbar">
         <div class="menu-links">
-            <a href="index.html" class="nav-btn nav-active">BERANDA</a>
-            <a href="aplikasi.html" class="nav-btn">APLIKASI</a>
-            <a href="kontak.html" class="nav-btn">KONTAK</a>
+            <button class="nav-btn nav-active" onclick="switchTab(event, 'beranda')">
+                🏠 Beranda
+            </button>
+            <button class="nav-btn" onclick="switchTab(event, 'pembelajaran')">
+                📚 Pembelajaran
+            </button>
+            <button class="nav-btn" onclick="switchTab(event, 'aplikasi')">
+                ⚡ Aplikasi
+            </button>
+            <button class="nav-btn" onclick="switchTab(event, 'kontak')">
+                📞 Kontak
+            </button>
         </div>
-    </div>
+    </nav>
 
     <div class="container">
-        <div class="welcome-box">
-            <h2>🏠 Selamat Datang di Kandank Online</h2>
-            <p>Website ini dikelola secara terstruktur menggunakan file terpisah agar lebih rapi dan mudah dikembangkan. Silakan pilih menu di atas untuk melihat menu aplikasi atau menghubungi kami.</p>
+        
+        <!-- Halaman Beranda -->
+        <div id="beranda" class="content-section active">
+            <div class="card" style="text-align: center;">
+                <h2>🏠 Selamat Datang di Kandank Online</h2>
+                <p>Website ini dikelola secara terstruktur sebagai wadah informasi digital, pusat aplikasi web mandiri, serta sarana pembelajaran online interaktif. Silakan pilih menu di atas untuk menjelajahi materi dan fitur lainnya.</p>
+            </div>
         </div>
+
+        <!-- Halaman Pembelajaran Online -->
+        <div id="pembelajaran" class="content-section">
+            <div class="card">
+                <h2>📚 Pusat Pembelajaran Online</h2>
+                <p>Pilih modul atau materi kursus di bawah ini untuk mulai belajar secara mandiri:</p>
+                
+                <div class="grid-courses">
+                    <div class="course-card">
+                        <h3>💻 Dasar Pemrograman Web</h3>
+                        <p>Belajar membuat struktur dasar website menggunakan HTML dan penataan gaya dengan CSS modern.</p>
+                        <button class="btn-action" onclick="alert('Membuka modul Dasar Pemrograman Web')">Mulai Belajar</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>🛠️ Pembuatan Aplikasi Mandiri</h3>
+                        <p>Panduan praktis membangun aplikasi berbasis web yang ringan, cepat, dan efisien.</p>
+                        <button class="btn-action" onclick="alert('Membuka modul Aplikasi Mandiri')">Mulai Belajar</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>📈 Strategi Peluang Bisnis Digital</h3>
+                        <p>Tips dan trik mengelola platform digital untuk mendukung perkembangan peluang usaha Anda.</p>
+                        <button class="btn-action" onclick="alert('Membuka modul Bisnis Digital')">Mulai Belajar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman Aplikasi -->
+        <div id="aplikasi" class="content-section">
+            <div class="card">
+                <h2>⚡ Daftar Aplikasi Web</h2>
+                <p>Kumpulan aplikasi web mandiri yang dikembangkan untuk membantu efisiensi aktivitas digital Anda.</p>
+                <ul style="text-align: left; display: inline-block; margin: 0 auto; padding-left: 20px;">
+                    <li>Sistem Pendukung Portofolio Digital</li>
+                    <li>Alat Bantu Hitung & Pengelolaan Data Sederhana</li>
+                    <li>Modul Navigasi Layanan Publik Cepat</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <button class="btn-action" onclick="alert('Fitur aplikasi sedang dikembangkan.')">Akses Aplikasi</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman Kontak -->
+        <div id="kontak" class="content-section">
+            <div class="card">
+                <h2>📞 Hubungi Kami</h2>
+                <p>Punya pertanyaan, saran, atau ingin bekerja sama? Silakan kirimkan pesan melalui formulir di bawah ini:</p>
+                
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah dikirim.');">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama Anda..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" placeholder="nama@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan / Pertanyaan</label>
+                        <textarea id="pesan" rows="4" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+
     </div>
 
     <footer>
         <p>&copy; 2026 kanghary77.github.io. Hak Cipta Dilindungi.</p>
     </footer>
+
+    <!-- Skrip JavaScript -->
+    <script>
+        function switchTab(event, sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('nav-active'));
+
+            document.getElementById(sectionId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
